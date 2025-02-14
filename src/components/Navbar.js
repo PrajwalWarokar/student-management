@@ -44,12 +44,6 @@ const StudentManagement = () => {
               <li className="nav-item">
                 <a className="nav-link" href="#">Students</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Class</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Download</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -106,6 +100,10 @@ const StudentManagement = () => {
           </div>
         </div>
       </div>
+
+      <footer className="bg-dark text-white text-center py-3 mt-5">
+        <p className="mb-0">&copy; 2025 Student Management System. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
