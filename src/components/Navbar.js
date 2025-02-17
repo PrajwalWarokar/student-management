@@ -11,6 +11,10 @@ const StudentManagement = () => {
     return emailRegex.test(email);
   };
 
+  const isEmailUnique = (email) => {
+    return !students.some(student => student.email === email);
+  };
+
   const addStudent = () => {
     if (!name || !email) {
       setEmailError("Both fields are required");
@@ -19,6 +23,11 @@ const StudentManagement = () => {
 
     if (!validateEmail(email)) {
       setEmailError("Invalid email format");
+      return;
+    }
+
+    if (!isEmailUnique(email)) {
+      setEmailError("Invalid ID: Email ID is already used");
       return;
     }
 
